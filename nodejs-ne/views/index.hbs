@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/stylesheets/style.css">
+</head>
+<body>
+    <header id="header-wrap">
+        <div id="header">
+            <div class="left">
+                <a class="logo" href="/"><img class="logo-img" src="/images/Logo-ngang-01.png" alt=""></a>
+                <div class="menu">
+                    <ul class="menu">
+                        <li><a href="/">Trang chủ</a></li>
+                        <li><a href="/">Giới thiệu</a></li>
+                        <li><a href="/">Sản phẩm</a></li>
+                        <li><a href="/">Tin tức</a></li>
+                        <li><a href="/">Cửa hàng</a></li>
+                        <li><a href="/">Tuyển dụng</a></li>
+                        <li><a href="/">Nhượng quyền</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right">
+                <div class="search">
+                    <input type="text" placeholder="Tìm kiếm">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="cart">
+                    <a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <span>0</span>
+                </div>
+                <div class="login">
+                    <a href="/login">Đăng nhập</a>
+                    <a href="/register">Đăng ký</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="banner">
+            <img class="banner-img" src="/images/banner1.png" alt="">
+        </div>
+
+        <div class="hot-product">
+            <div class="section-title">
+                <div class="text1">ToCoToCo Menu</div>
+                <div class="text2">Sản phẩm nổi bậc</div>
+                <div class="icon-bottom-title"></div>
+            </div>
+
+            <div class="section-content">
+                <div class="list-product">
+                    {{#each products}}
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="/images/{{this.image}}" alt="">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">
+                                {{this.name}}
+                            </div>
+                            <div class="product-price">
+                                {{this.price}}đ
+                            </div>
+                            <div class="btn-add-to-cart">Đặt hàng</div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+
+                <div class="section-about-us">
+                    <img src="/images/about_us_new.png" alt="">
+                    <div class="about-us-content">
+                        <div class="section-title">
+                            <div class="text1">ToCoToCo Story</div>
+                            <div class="text2">Về chúng tôi</div>
+                            <div class="icon-bottom-title"></div>
+                        </div>
+                        <div class="about-us-description">
+                            " Bên cạnh niềm tự hào về những ly trà sữa ngon – sạch – tươi, chúng tôi luôn tự tin
+                            mang đến khách hàng những trải nghiệm tốt nhất về dịch vụ và không gian. "
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="main-footer">
+            <div class="footer-logo">
+                <img src="/images/ft_logo.png" alt="">
+            </div>
+            <div class="footer-1">
+                <ul>
+                    <li class="footer-title">Công ty CP TM & Dv Taco Việt Nam</li>
+                    <li class="footer-line">
+                        <i style="color: #deac38;" class="fa-solid fa-location-dot"></i>
+                        Tầng 2 tòa nhà T10, Times City Vĩnh Tuy, Hai Bà Trưng, Hà Nội.
+                    </li>
+                    <li class="footer-line">
+                        <i style="color: #deac38;" class="fa-solid fa-phone"></i>
+                        1900.63.69.36
+                       </li>
+                       <li class="footer-line">
+                           <i style="color: #deac38;" class="fa-solid fa-envelope"></i>
+                           info@tocotocotea.com
+                       </li>
+                       <li class="footer-line">
+                        Số ĐKKD: 0106341306. Ngày cấp: 16/03/2017.
+                    </li>
+                       <li class="footer-line">
+                           Nơi cấp: Sở kế hoạch và Đầu tư Thành phố Hà Nội.
+                       </li>
+                       <div class="footer-line">
+                           <i style="color: #deac38; padding: 0 5px;" class="fa-brands fa-facebook"></i>  
+                           <i style="color: #deac38; padding: 0 5px;" class="fa-brands fa-instagram"></i>  
+                           <i style="color: #deac38; padding: 0 5px;" class="fa-brands fa-youtube"></i>  
+                           <i style="color: #deac38; padding: 0 5px;" class="fa-brands fa-twitter"></i>  
+                            <i style="color: #deac38; padding: 0 5px;" class="fa-brands fa-google-plus"></i>
+                     </div>
+                    <div class="footer-download-app">
+                        <img style="width: 132px; height: 38px;" src="/images/Googleplay.png" alt="">
+                        <img style="width: 132px; height: 38px;" src="/images/Appstore.png" alt="">
+                        <br>
+                        <img style="width: 132px; height: 38px;" src="/images/bo_cong_thuong_grande.png" alt="">
+                    </div>
+                </ul>
+            </div>
+            <div class="footer-2">
+                 <ul>
+                    <li class="footer-title">Về chúng tôi</li>
+                    <li class="about-us"><a href="">Giới thiệu về TocoToco</a></li>
+                    <li class="about-us"><a href="">Nhượng quyền</a></li>
+                    <li class="about-us"><a href="">TIn tức khuyến mại</a></li>
+                    <li class="about-us"><a href="">Quy định chung</a></li>
+                    <li class="about-us"><a href="">TT liên hệ và ĐKKD</a></li>
+                </ul>
+            </div>
+               <div class="footer-3">
+                   <ul>
+                       <li class="footer-title">Chính sách</li>
+                       <li class="footer-line"><a href="">Chính sách thành viên</a></li>
+                       <li class="footer-line"><a href="">Hình thức thanh toán</a></li>
+                    <li class="footer-line"><a href="">Vận chuyển giao hàng</a></li>
+                    <li class="footer-line"><a href="">Đổi trả và hoàn tiền</a></li>
+                     <li class="footer-line"><a href="">Bảo vệ thông tin cá nhân</a></li>
+                     <li class="footer-line"><a href="">Bảo trì, bảo hành</a></li>
+                 </ul>
+            </div>
+        </div>
+        <hr style="margin: 0px 124px;">
+        <div class="bottom-footer">
+                <div class="left">
+                    ToCoToCo - Thương hiệu trà sữa tiên phong sử dụng nguồn nông sản Việt Nam
+                </div>
+                <div class="righ">
+                    Copyrights © 2019 by ToCoToCoTea. All rights reserved.
+                </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/7d00a1e008.js" crossorigin="anonymous"></script>
+</body>
+</html>
